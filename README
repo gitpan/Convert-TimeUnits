@@ -1,0 +1,44 @@
+Convert-TimeUnits version 0.01
+==============================
+
+Convert::TimeUnits is a Perl module that simplifies units(1)-esque conversions
+of time units via both functional and object-oriented interfaces. The functional
+interface provides simple unit_to_other-unit conversion functions suitable for
+quick conversions. The object-oriented interface provides field accessors and
+methods to convert all fields to the requested unit and tally those values,
+returning the total. For the sake of consistency, all units referenced in
+Convert::TimeUnits -- whether field names or function / method names -- are
+pluralized. Negative values are not permitted. Integer, floating point, and
+overflow (e.g. seconds > 60) values are all valid. The constants for this
+program were obtained from the units program as shipped with FreeBSD 5.2.1.
+Preliminary tests reveal no discrepancies with GNU units though contrary reports
+are always welcome.
+
+All methods and functions contained in Convert::TimeUnits perform extensive
+error testing before performing their specific tasks. Due to the importance of
+time in today's society and the required accuracy of time-based calculations,
+all errors are fatal and use croak (and thus Convert::TimeUnits requires the
+Carp module, a standard Perl module since before version 5.00_5).
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+ o Carp
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2004 by Christopher Nehren <apeiron@comcast.net>
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.00_5 or,
+at your option, any later version of Perl 5 you may have available.

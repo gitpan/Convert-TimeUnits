@@ -1,0 +1,6 @@
+Revision history for Perl extension Convert::TimeUnits.
+
+0.01  Wed May 19 02:40:40 2004
+	- original version; created by h2xs 1.23 with options
+		-AX -n Convert::TimeUnits -b 5.6.0
+
